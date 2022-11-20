@@ -1,0 +1,10 @@
+#!/bin/bash
+
+IP=$(ip route get 1.2.3.4 | awk '{print $7}')
+
+if ping -q -c 1 -W 1 google.com >/dev/null; then
+  printf "   $IP "
+else
+  printf "  no internet  "
+fi
+

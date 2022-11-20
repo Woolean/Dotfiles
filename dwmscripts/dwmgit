@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cp -r dwm-6.2 mysuckless
+cp -r st-0.8.4 mysuckless
+cp -r dwmscripts mysuckless
+cp .dwm/autostart.sh mysuckless
+
+cd mysuckless
+git add *
+git commit -m "update"
+git push

@@ -1,0 +1,39 @@
+#!/bin/sh
+
+now=$(date +"%d/%m/%Y")
+
+# nvim
+cp /home/woolean/.config/nvim/init.vim /home/woolean/dotfiles/nvim
+cp -r /home/woolean/.config/nvim/vim-plug /home/woolean/dotfiles/nvim
+
+# Otros configs
+cp /home/woolean/.config/picom/picom.conf /home/woolean/dotfiles/configs
+cp /home/woolean/.zshrc /home/woolean/dotfiles/configs
+cp /home/woolean/.local/bin/update-git /home/woolean/dotfiles/scripts
+cp /home/woolean/.dwm/autostart.sh /home/woolean/dotfiles/.dwm/autostart.sh
+cp /home/woolean/.Xresources /home/woolean/dotfiles/configs
+cp /home/woolean/.config/zathura/zathurarc /home/woolean/dotfiles/configs
+#cp -r /home/woolean/.config/kitty /home/woolean/dotfiles/
+
+# Wallpapers
+cp -r /home/woolean/Imágenes/Wallpapers/Actuales /home/woolean/dotfiles/Wallpapers
+
+# NixOS
+#cp /etc/nixos/configuration.nix /home/woolean/dotfiles/configs
+
+# i3-gaps y todo eso
+#cp -r /home/woolean/.config/i3 /home/woolean/dotfiles
+#cp -r /home/woolean/.config/i3blocks /home/woolean/dotfiles
+#cp -r /home/woolean/.config/i3status /home/woolean/dotfiles
+
+#Suckless
+cp -r /home/woolean/dwm-6.2 /home/woolean/dotfiles
+#cp -r /home/woolean/st-0.8.4 /home/woolean/dotfiles
+cp -r /home/woolean/dwmscripts /home/woolean/dotfiles
+
+
+cd dotfiles
+git add -A
+git commit -m "Update. Fecha: ${now}"
+git push
+

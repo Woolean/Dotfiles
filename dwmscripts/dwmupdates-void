@@ -1,0 +1,6 @@
+#!/bin/sh
+
+updates="$(xbps-install -nuM | wc -l)"
+#updates=$(("$updatesarch" + "$updatesaur"))
+icon1="  "
+printf " %s %s \\n"  "$icon1" "$updates"

@@ -1,0 +1,57 @@
+##### THIS FILE IS BEING CURRENTLY MANAGED BY URXVTCONFIG #####
+##### CHANGES DONE TO THIS FILE MANUALLY MAY AFFECT THE FUNCTIONALITY ######
+##### PROCEED WITH CAUTION! #####
+
+! special colors
+*.foreground:  #dadada
+*.background:  #141b1e
+*.cursorColor:  #dadada
+! black
+*.color0:      #232a2d
+*.color8:      #2d3437
+! red
+*.color1:      #e57474
+*.color9:      #ef7e7e
+! green
+*.color2:      #8ccf7e
+*.color10:     #96d988
+! yellow
+*.color3:      #e5c76b
+*.color11:     #f4d67a
+! blue
+*.color4:      #67b0e8
+*.color12:     #71baf2
+! magenta
+*.color5:      #c47fd5
+*.color13:     #ce89df
+! cyan
+*.color6:      #6cbfbf
+*.color14:     #67cbe7
+! white
+*.color7:      #b3b9b8
+*.color15:     #bdc3c2
+
+URxvt*scrollBar:         false
+URxvt*scrollBar_right:   false
+
+URxvt*transparent:       false
+
+URxvt.font: xft:Iosevka Extended:pixelsize=16
+URxvt.letterSpace: 0
+
+*antialias:  true
+*autohint:   true
+
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: brave-browser
+
+URxvt.matcher.button: 1
+URxvt.internalBorder: 30
+ urxvt.perl-ext-common: default,tabbed,matcher,resize-font,-tabbed
+
+! Restore Ctrl+Shift+(c|v)
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+

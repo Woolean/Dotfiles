@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#Requiere playerctl
+
+if pgrep -x "spotify" > /dev/null
+then
+	cancion="$(playerctl metadata xesam:title -i firefox)"
+	artista="$(playerctl metadata xesam:artist -i firefox)"
+	icon="  "
+	printf " %s %s - %s \\n" "$icon" "$cancion" "$artista"
+else
+	printf ""
+fi

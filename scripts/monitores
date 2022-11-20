@@ -1,0 +1,9 @@
+#!/bin/sh
+
+sleep 3 
+xrandr --newmode "1600x900"  151.25  1600 1704 1872 2144  900 903 908 942 -hsync +vsync 
+xrandr --addmode VGA-0 1600x900
+xrandr --output HDMI-0 --primary --mode 1920x1080 --output VGA-0 --mode 1600x900 --pos 1920x180
+
+feh --bg-fill /home/woolean/Imágenes/wallpapers/Actuales/1.jpg /home/woolean/Imágenes/wallpapers/Actuales/2.jpg
+#feh --bg-fill --no-xinerama /home/woolean/Imágenes/wallpapers/Actuales/dual.jpg

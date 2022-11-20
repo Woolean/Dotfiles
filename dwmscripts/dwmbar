@@ -1,0 +1,30 @@
+#!/bin/bash
+
+while true; do
+
+#	/home/woolean/dwmscripts/dwmweather > /home/woolean/dwmscripts/dwmweather.txt
+	/home/woolean/dwmscripts/dwmupdates > /home/woolean/dwmscripts/dwmupdates.txt
+
+	sleep 600s
+
+done &
+
+while true; do
+
+	VOL=$(/home/woolean/dwmscripts/dwmvol)
+	#WEATHER=$(< /home/woolean/dwmscripts/dwmweather.txt)
+	CPU=$(/home/woolean/dwmscripts/dwmcpu)
+	MEM=$(/home/woolean/dwmscripts/dwmmemory)
+	#IP=$(/home/woolean/dwmscripts/dwmip)
+	NET=$(/home/woolean/dwmscripts/dwmnet2)
+	#TEMP=$(/home/woolean/dwmscripts/dwmtemp)
+	#HDD=$(/home/woolean/dwmscripts/dwmdisk)
+	UPDATES=$(< /home/woolean/dwmscripts/dwmupdates.txt)
+	TIME=$(/home/woolean/dwmscripts/dwmclock)
+	MUSIC=$(/home/woolean/dwmscripts/dwmspotify)
+	sleep 10s	
+	xsetroot -name "$MUSIC $CPU $MEM $NET $UPDATES $VOL $TIME "
+
+	#sleep 10s
+	
+done &
