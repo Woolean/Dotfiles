@@ -20,6 +20,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'morhetz/gruvbox'
     " Everblush colorscheme
     Plug 'mangeshrex/everblush.vim'
+    " Iceberg colorscheme
+    Plug 'cocopon/iceberg.vim'
+    " Xresources colorscheme
+    Plug 'nekonako/xresources-nvim'
 
     call plug#end()
 

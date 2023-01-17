@@ -18,7 +18,13 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 " colorscheme japanesque
 " let g:gruvbox_contrast_dark = 'hard' 
 " colorscheme gruvbox
-colorscheme everblush
+
+augroup user_colors
+  autocmd!
+  autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
+augroup END
+
+colorscheme xresources
 
 lua require'colorizer'.setup()
 
