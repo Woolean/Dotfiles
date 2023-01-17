@@ -1,16 +1,10 @@
-set recolor false
 set selection-clipboard clipboard
 set first-page-column 1:2
 set render-loading true
 
-set default-bg \#141b1e
-set recolor-darkcolor \#141b1e
-set recolor-lightcolor \#dadada
-
-set inputbar-bg                 "#181f21" # Background
-set inputbar-fg                 "#dadada" # Foreground
-set statusbar-bg                "#181f21" # Background
-set statusbar-fg                "#dadada" # Foreground
+set default-bg \#16161D
+set recolor-lightcolor \#16161D
+set recolor-darkcolor \#dcd7ba
 
 set highlight-color             "#ffb86c" # Orange
 set highlight-active-color      "#ff79c6" # Pink

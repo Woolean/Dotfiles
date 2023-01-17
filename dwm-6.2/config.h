@@ -10,24 +10,25 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 0;        /* 0 means that dwm will calculate     bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = {"Siji:size=17", "Six Eight Zero Nine Chargen:size=9" };
 static const char dmenufont[]       = "Six Eight Zero Nine Chargen:size=11:style=thin";
-static const char col_gray1[]       = "#141b1e";
-static const char col_gray2[]       = "#232a2d";
-static const char col_gray3[]       = "#dadada";
-static const char col_gray4[]       = "#6cbfbf";
-static const char col_cyan[]        = "#67b0e8";
-static const char col_darkpurple[]  = "#c47fd5";
-//static const char col_gray1[]       = "#1d2021";
-//static const char col_gray2[]       = "#282828";
-//static const char col_gray3[]       = "#ebdbb2";
-//static const char col_gray4[]       = "#83a598";
-//static const char col_cyan[]        = "#076678";
-//static const char col_darkpurple[]  = "#b16286";
+static const char col_gray1[]       = "#16161D";
+static const char col_gray2[]       = "#090618";
+static const char col_gray3[]       = "#dcd7ba";
+static const char col_gray4[]       = "#7e9cd8";
+static const char col_cyan[]        = "#7fb4ca";
+static const char col_darkpurple[]  = "#957fb8";
+
+//static const char col_gray1[]       = "#141b1e";
+//static const char col_gray2[]       = "#232a2d";
+//static const char col_gray3[]       = "#dadada";
+//static const char col_gray4[]       = "#6cbfbf";
+//static const char col_cyan[]        = "#67b0e8";
+//static const char col_darkpurple[]  = "#c47fd5";
 
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_darkpurple, col_gray1,  col_darkpurple },
+	[SchemeSel]  = { col_gray4, col_gray1,  col_gray4 },
 };
 
 //static const char *colors[][3]      = {
@@ -84,12 +85,12 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-i", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_darkpurple, "-sf", col_gray1, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-i", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_gray4, "-sf", col_gray1, NULL };
 //static const char *termcmd[]  = { "kitty", NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
 static const char *browsercmd[] = {"/home/woolean/.local/bin/brave-shortcut", NULL};
 static const char *pavucontrolcmd[] = {"pavucontrol", NULL};
-static const char *pcmanfmcmd[] = {"pcmanfm", NULL};
+static const char *pcmanfmcmd[] = {"nemo", NULL};
 static const char *screenshootercmd[] = {"xfce4-screenshooter", NULL};
 static const char *spotifycmd[] = {"spotify", NULL};
 static const char *playcmd[]       = { "playerctl", "play-pause", NULL };
